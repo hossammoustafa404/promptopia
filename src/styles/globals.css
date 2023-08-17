@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Components */
+@layer components {
+  .container {
+    @apply px-4 mx-auto xl:max-w-[1170px];
+  }
+}
+
+/* Tailwind Styles */
+.app {
+  @apply relative z-10;
+}
+
+.black-btn {
+  @apply py-1.5 text-white font-semibold px-5 rounded-3xl bg-black hover:bg-white hover:text-black hover:outline hover:outline-[1px] hover:outline-black duration-200;
+}
+
+.outlined-btn {
+  @apply py-1.5 text-black font-semibold px-5 rounded-3xl bg-white hover:bg-black hover:text-white outline outline-[1px] outline-black duration-200 hover:outline-transparent;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.waiting {
+  animation-name: waiting;
+  animation-iteration-count: infinite;
+  animation-duration: 0.7s;
+  animation-direction: alternate-reverse;
+}
+
+.head-gradient {
+  @apply text-3xl font-bold md:text-4xl bg-gradient-to-r from-orange-400 to-orange-700 bg-clip-text text-fill-transparent leading-[1.7];
+}
+.desc {
+  @apply text-slate-600 mt-4;
+}
+/* Animations */
+@keyframes waiting {
+  to {
+    transform: scale(2);
+  }
+}
